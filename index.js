@@ -27,7 +27,11 @@ const prefix = "!";
 const token = process.env.TOKEN;
 
 if (!token) {
-    console.log("MTUwNjQ4ODYwMTIzMDE4NDUyOQ.GA7s2P.Tksut71_jOcIcFx3FbyHAeLo0uVDpi8OtruUg0");
+    console.log("MTUwNjQ4ODYwMTIzMDE4NDUyOQ.GFXdnk.psJ_4U2Ryy97T5xG3OkqeetFlX_8f4Vb2SYe7s
+
+Copiar
+
+Token de redefinição");
     process.exit(1);
 }
 
