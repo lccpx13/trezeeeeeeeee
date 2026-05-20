@@ -49,7 +49,7 @@ client.on('messageCreate', async (message) => {
         const args = message.content.slice(prefix.length).trim().split(/ +/);
         const command = args.shift().toLowerCase();
 
-        // ================= PLAY =================
+        // PLAY
         if (command === 'play') {
 
             const voiceChannel = message.member.voice.channel;
@@ -102,14 +102,14 @@ client.on('messageCreate', async (message) => {
             });
 
             player.on('error', (error) => {
-                console.log('Erro no player:', error.message);
+                console.log(error);
                 connection.destroy();
             });
 
-            return message.channel.send(`🎵 Tocando: **${song.title}**`);
+            message.channel.send(`🎵 Tocando: ${song.title}`);
         }
 
-        // ================= LEAVE =================
+        // LEAVE
         if (command === 'leave') {
 
             const connection = getVoiceConnection(message.guild.id);
@@ -120,13 +120,12 @@ client.on('messageCreate', async (message) => {
 
             connection.destroy();
 
-            return message.channel.send('👋 Sai do canal.');
+            message.channel.send('👋 Sai do canal.');
         }
 
     } catch (error) {
 
         console.log(error);
-
         message.channel.send('❌ Ocorreu um erro.');
 
     }
