@@ -5,7 +5,11 @@ const client = new Client({
 });
 
 const prefix = "!";
-const token = "COLOQUE_SEU_TOKEN_AQUI";
+const token = "MTUwNjQ4ODYwMTIzMDE4NDUyOQ.GFXdnk.psJ_4U2Ryy97T5xG3OkqeetFlX_8f4Vb2SYe7s
+
+Copiar
+
+Token de redefinição";
 
 client.once('ready', () => {
     console.log(`✅ Bot online como ${client.user.tag}`);
